@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manish Pareek & Associates | Chartered Accountants & Institutional Advisors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandDark:   "#0F172A",
+              brandAccent: "#0F766E",
+              brandLight:  "#F8FAFC",
+              brandMuted:  "#475569",
+              brandGold:   "#B45309",
+            },
+            screens: { xs: "400px" },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Service card image zoom */
+      .svc-img { transition: transform .45s ease; }
+      .svc-card:hover .svc-img { transform: scale(1.06); }
+      .svc-card { transition: border-color .2s, box-shadow .2s; }
+      .svc-card:hover { border-color: #0F766E; box-shadow: 0 8px 28px rgba(15,118,110,.10); }
+
+      /* Industry card hover */
+      .ind-card .ind-img { transition: transform .45s ease; }
+      .ind-card:hover .ind-img { transform: scale(1.06); }
+      .ind-card:hover .ind-overlay { opacity: 1; }
+      .ind-overlay { opacity: 0; transition: opacity .3s; }
+
+      /* Partner card */
+      .partner-card:hover .partner-overlay { opacity:1; }
+      .partner-overlay { opacity:0; transition: opacity .3s; }
+    </style>
+  </head>
+  <body class="bg-brandLight text-slate-900 font-sans antialiased">
+
+    <!-- ── NAVIGATION (unchanged) ── -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center space-x-3 w-full md:w-auto justify-center md:justify-start">
+          <div class="border-2 border-brandDark text-brandDark font-serif text-2xl font-black px-3 py-1 bg-slate-50 tracking-tighter shrink-0">CA</div>
+          <div class="border-l border-slate-300 pl-3">
+            <span class="block text-xl font-black tracking-tight text-brandDark uppercase leading-none">Manish Pareek</span>
+            <span class="block text-[11px] font-bold tracking-widest text-brandAccent uppercase mt-1">& Associates</span>
+            <span class="block text-[9px] text-brandMuted font-medium tracking-normal mt-0.5">Chartered Accountants & Advisors</span>
+          </div>
+        </div>
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[11px] font-bold uppercase tracking-wider text-slate-600">
+          <a href="#firm"      class="hover:text-brandAccent transition py-2">Firm Profile</a>
+          <a href="#practices" class="hover:text-brandAccent transition py-2">Core Frameworks</a>
+          <a href="#sectors"   class="hover:text-brandAccent transition py-2">Sectors</a>
+          <a href="#team"      class="hover:text-brandAccent transition py-2">Our Team</a>
+          <a href="#careers"   class="hover:text-brandAccent transition py-2">Careers</a>
+          <a href="#locations" class="hover:text-brandAccent transition py-2">Locations</a>
+        </nav>
+        <div class="w-full md:w-auto text-center shrink-0">
+          <a href="#intake" class="bg-brandDark hover:bg-slate-800 text-white text-[11px] font-bold uppercase tracking-wider px-6 py-3 border border-brandDark transition block w-full md:w-auto">
+            Request Consultation
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ══════════════════════════════════════════
+         HERO — dot-grid + full-width bg image overlay
+    ══════════════════════════════════════════ -->
+    <section class="relative text-white border-b-4 border-brandAccent overflow-hidden" style="min-height:88vh;">
+      <!-- Background image -->
+      <img
+        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&auto=format&fit=crop&q=80"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        style="filter:brightness(.28);"
+      />
+      <!-- Dot-grid overlay (your original pattern) -->
+      <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-30 z-10"></div>
+      <!-- Left gradient so text is always readable -->
+      <div class="absolute inset-0 bg-gradient-to-r from-brandDark/90 via-brandDark/50 to-transparent z-10"></div>
+
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center" style="min-height:88vh;">
+        <div class="max-w-2xl py-24">
+          <p class="text-xs font-bold tracking-widest text-brandGold uppercase mb-4">// NATIONAL PRACTICE & ADVISORY</p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-6 leading-none text-slate-100">
+            Institutional Expertise.<br class="hidden sm:inline"/>Uncompromising Standards.
+          </h1>
+          <p class="text-sm sm:text-base lg:text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed font-light">
+            Providing multi-jurisdictional financial audit, corporate tax optimisation, risk mitigation matrices, and strategic growth restructuring for industry-leading enterprises.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#practices" class="bg-brandAccent hover:bg-teal-800 text-white font-bold text-xs uppercase tracking-wider px-7 py-4 transition text-center shadow-md">
+              Explore Firm Frameworks
+            </a>
+            <a href="#intake" class="border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-bold text-xs uppercase tracking-wider px-7 py-4 transition text-center">
+              Secure Client Intake
+            </a>
+          </div>
+          <!-- Stat strip -->
+          <div class="mt-14 flex gap-10 border-t border-slate-700 pt-8">
+            <div>
+              <p class="text-2xl font-black text-brandGold">20+</p>
+              <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">Years of Practice</p>
+            </div>
+            <div class="border-l border-slate-700 pl-10">
+              <p class="text-2xl font-black text-brandGold">500+</p>
+              <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">Corporate Clients</p>
+            </div>
+            <div class="border-l border-slate-700 pl-10">
+              <p class="text-2xl font-black text-brandGold">2</p>
+              <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-1">Office Locations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         ABOUT — image left, text right (Kalani layout, your theme)
+    ══════════════════════════════════════════ -->
+    <section id="firm" class="py-16 sm:py-24 bg-white border-b border-slate-200 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <!-- Image column -->
+          <div class="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&auto=format&fit=crop&q=80"
+              alt="Manish Pareek & Associates team"
+              class="w-full h-[460px] object-cover object-center"
+            />
+            <!-- Teal bottom bar with credential -->
+            <div class="absolute bottom-0 left-0 right-0 bg-brandAccent px-6 py-4 flex items-center justify-between">
+              <span class="text-white text-[10px] font-bold uppercase tracking-widest">Member — Institute of Chartered Accountants of India</span>
+              <span class="text-white font-black text-sm">ICAI</span>
+            </div>
+          </div>
+
+          <!-- Text column -->
+          <div>
+            <p class="text-xs font-bold tracking-widest text-brandAccent uppercase">Who We Are</p>
+            <h2 class="text-2xl sm:text-3xl font-black text-brandDark mt-3 tracking-tight leading-tight">
+              Delivering Tailor-Made Institutional Advisory Since Inception.
+            </h2>
+            <div class="w-12 h-[3px] bg-brandGold mt-4 mb-6"></div>
+            <p class="font-bold text-brandDark text-sm mb-4">
+              Manish Pareek & Associates brings together a collaborative team of experienced professionals, offering specialised legal-financial expertise to global organisations, Indian corporate houses, and fast-scaling startups alike.
+            </p>
+            <p class="text-brandMuted text-sm leading-relaxed mb-4">
+              We believe corporate growth requires comprehensive foresight. Our multi-partner firm functions as a strategic defence mechanism, systematically analysing complex internal systems, handling critical tax representation, and managing extensive statutory obligations with absolute accuracy.
+            </p>
+            <p class="text-brandMuted text-sm leading-relaxed">
+              Mirroring the frameworks of the nation's top legacy institutions, our operating approach relies on continuous independent peer review, absolute process privacy, and deep, definitive regulatory understanding.
+            </p>
+            <a href="#intake" class="inline-block mt-8 bg-brandDark hover:bg-slate-800 text-white text-[11px] font-bold uppercase tracking-wider px-7 py-3 transition">
+              Read More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SERVICES — image-top cards (your border/hover style)
+    ══════════════════════════════════════════ -->
+    <section id="practices" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-xs font-bold tracking-widest text-brandAccent uppercase">Disciplines & Mandates</p>
+          <h2 class="text-2xl sm:text-3xl font-black text-brandDark mt-2 tracking-tight">Our Services</h2>
+          <p class="text-brandMuted text-sm mt-2">Our business advisory services are designed to help.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Card 1 -->
+          <div class="svc-card bg-white border border-slate-200 flex flex-col overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&auto=format&fit=crop&q=80"
+                   alt="Corporate Tax" class="svc-img w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-brandDark uppercase tracking-wider mb-2">Corporate Tax & Structuring</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Systemic optimisation strategies, multi-tier corporate structuring, transfer pricing compliance, and cross-border commercial transaction reviews.</p>
+              </div>
+              <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-[10px] text-brandAccent font-bold tracking-widest uppercase">Direct Taxation Desk</span>
+                <a href="#intake" class="text-brandAccent text-xs font-bold hover:text-brandDark transition">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="svc-card bg-white border border-slate-200 flex flex-col overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80"
+                   alt="Statutory Audit" class="svc-img w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-brandDark uppercase tracking-wider mb-2">Statutory Audit & Assurance</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Complete financial balance verification for listed, unlisted entities, public sector banks, and large corporate enterprises under Section 44AB.</p>
+              </div>
+              <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-[10px] text-brandAccent font-bold tracking-widest uppercase">Audit Infrastructure</span>
+                <a href="#intake" class="text-brandAccent text-xs font-bold hover:text-brandDark transition">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="svc-card bg-white border border-slate-200 flex flex-col overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&auto=format&fit=crop&q=80"
+                   alt="GST" class="svc-img w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-brandDark uppercase tracking-wider mb-2">Indirect Tax & GST Solutions</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">End-to-end GST management, data reconciliation protocols, transactional advisory, and enforcement representation before appellate boards.</p>
+              </div>
+              <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-[10px] text-brandAccent font-bold tracking-widest uppercase">GST Advisory</span>
+                <a href="#intake" class="text-brandAccent text-xs font-bold hover:text-brandDark transition">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="svc-card bg-white border border-slate-200 flex flex-col overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop&q=80"
+                   alt="Real Estate" class="svc-img w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-brandDark uppercase tracking-wider mb-2">Real Estate & RERA Mandates</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Planning, structuring, and execution legal audits aligned precisely with the Real Estate (Regulation and Development) Act framework.</p>
+              </div>
+              <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-[10px] text-brandAccent font-bold tracking-widest uppercase">RERA Oversight</span>
+                <a href="#intake" class="text-brandAccent text-xs font-bold hover:text-brandDark transition">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="svc-card bg-white border border-slate-200 flex flex-col overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&auto=format&fit=crop&q=80"
+                   alt="Startup Advisory" class="svc-img w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-brandDark uppercase tracking-wider mb-2">Startup Advisory & VC Support</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Assistance with DPIIT registration, early-stage capital transaction structures, compliance architecture setup, and investor due diligence.</p>
+              </div>
+              <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-[10px] text-brandAccent font-bold tracking-widest uppercase">Venture Capital</span>
+                <a href="#intake" class="text-brandAccent text-xs font-bold hover:text-brandDark transition">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="svc-card bg-white border border-slate-200 flex flex-col overflow-hidden">
+            <div class="h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600&auto=format&fit=crop&q=80"
+                   alt="Banking Finance" class="svc-img w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-sm font-bold text-brandDark uppercase tracking-wider mb-2">Banking, Finance & Syndication</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Project profiling reports, comprehensive debt syndication frameworks, and technical asset capability evaluations for public/domestic ventures.</p>
+              </div>
+              <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
+                <span class="text-[10px] text-brandAccent font-bold tracking-widest uppercase">Corporate Finance</span>
+                <a href="#intake" class="text-brandAccent text-xs font-bold hover:text-brandDark transition">Read More →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="#intake" class="bg-brandDark hover:bg-slate-800 text-white text-[11px] font-bold uppercase tracking-wider px-8 py-3 transition inline-block">
+            Read More
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         SECTORS — brandDark bg, image cards with label (like Kalani)
+    ══════════════════════════════════════════ -->
+    <section id="sectors" class="py-16 bg-brandDark text-white scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-xs font-bold tracking-widest text-brandGold uppercase">// Cross-Market Integration</p>
+          <h2 class="text-2xl sm:text-3xl font-black mt-2 tracking-tight">Industries We Serve</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          <div class="ind-card overflow-hidden border border-slate-800 hover:border-brandGold transition group">
+            <div class="h-44 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&auto=format&fit=crop&q=80"
+                   alt="Manufacturing" class="ind-img w-full h-full object-cover"/>
+              <div class="ind-overlay absolute inset-0 bg-brandAccent/30"></div>
+            </div>
+            <div class="bg-slate-900 px-4 py-3 flex items-center gap-3">
+              <span class="text-brandGold font-black text-sm font-serif">01</span>
+              <p class="text-xs font-bold uppercase tracking-wider">Manufacturing Houses</p>
+            </div>
+          </div>
+
+          <div class="ind-card overflow-hidden border border-slate-800 hover:border-brandGold transition group">
+            <div class="h-44 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=500&auto=format&fit=crop&q=80"
+                   alt="Banking" class="ind-img w-full h-full object-cover"/>
+              <div class="ind-overlay absolute inset-0 bg-brandAccent/30"></div>
+            </div>
+            <div class="bg-slate-900 px-4 py-3 flex items-center gap-3">
+              <span class="text-brandGold font-black text-sm font-serif">02</span>
+              <p class="text-xs font-bold uppercase tracking-wider">Banking & PSUs</p>
+            </div>
+          </div>
+
+          <div class="ind-card overflow-hidden border border-slate-800 hover:border-brandGold transition group">
+            <div class="h-44 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80"
+                   alt="Real Estate" class="ind-img w-full h-full object-cover"/>
+              <div class="ind-overlay absolute inset-0 bg-brandAccent/30"></div>
+            </div>
+            <div class="bg-slate-900 px-4 py-3 flex items-center gap-3">
+              <span class="text-brandGold font-black text-sm font-serif">03</span>
+              <p class="text-xs font-bold uppercase tracking-wider">Real Estate & Infra</p>
+            </div>
+          </div>
+
+          <div class="ind-card overflow-hidden border border-slate-800 hover:border-brandGold transition group">
+            <div class="h-44 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&auto=format&fit=crop&q=80"
+                   alt="E-Commerce" class="ind-img w-full h-full object-cover"/>
+              <div class="ind-overlay absolute inset-0 bg-brandAccent/30"></div>
+            </div>
+            <div class="bg-slate-900 px-4 py-3 flex items-center gap-3">
+              <span class="text-brandGold font-black text-sm font-serif">04</span>
+              <p class="text-xs font-bold uppercase tracking-wider">E-Commerce & Tech</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         PARTNERS — Founder featured, then grid (Kalani layout, your theme)
+    ══════════════════════════════════════════ -->
+    <section id="team" class="py-16 sm:py-24 bg-white border-b border-slate-200 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-12 text-center">
+          <p class="text-xs font-bold tracking-widest text-brandAccent uppercase">Leadership Matrix</p>
+          <h2 class="text-2xl sm:text-3xl font-black text-brandDark mt-2 tracking-tight">Partners & Senior Advisory Team</h2>
+          <p class="text-slate-500 text-xs mt-2">Expert corporate counsels delivering unified oversight across active regional desks.</p>
+        </div>
+
+        <!-- Founder — centred single card like Kalani -->
+        <div class="mb-4 text-center">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-brandMuted mb-6">Founder & Managing Partner</p>
+          <div class="inline-block">
+            <div class="partner-card border border-slate-200 overflow-hidden w-52 mx-auto">
+              <div class="relative h-56 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"
+                     alt="CA Manish Pareek" class="w-full h-full object-cover object-top"/>
+                <div class="partner-overlay absolute inset-0 bg-brandDark/70 flex items-center justify-center">
+                  <span class="text-[9px] text-brandGold font-bold uppercase tracking-widest border border-brandGold px-3 py-1.5">View Profile</span>
+                </div>
+              </div>
+              <div class="bg-brandAccent px-3 py-2 text-center">
+                <p class="text-white font-black text-xs uppercase tracking-wide">CA Manish Pareek</p>
+                <p class="text-teal-200 text-[9px] mt-0.5">B.Com., FCA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partners grid -->
+        <div class="mt-12">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-brandMuted text-center mb-8">Our Partners</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
+
+            <div class="partner-card border border-slate-200 overflow-hidden">
+              <div class="relative h-44 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"
+                     alt="Partner" class="w-full h-full object-cover object-top"/>
+                <div class="partner-overlay absolute inset-0 bg-brandDark/70 flex items-center justify-center">
+                  <span class="text-[9px] text-brandGold font-bold uppercase tracking-widest border border-brandGold px-3 py-1.5">View Profile</span>
+                </div>
+              </div>
+              <div class="bg-brandAccent px-3 py-2 text-center">
+                <p class="text-white font-black text-[11px] uppercase tracking-wide">CA Associate</p>
+                <p class="text-teal-200 text-[9px] mt-0.5">Taxation Desk</p>
+              </div>
+            </div>
+
+            <div class="partner-card border border-slate-200 overflow-hidden">
+              <div class="relative h-44 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&auto=format&fit=crop&q=80"
+                     alt="Partner" class="w-full h-full object-cover object-top"/>
+                <div class="partner-overlay absolute inset-0 bg-brandDark/70 flex items-center justify-center">
+                  <span class="text-[9px] text-brandGold font-bold uppercase tracking-widest border border-brandGold px-3 py-1.5">View Profile</span>
+                </div>
+              </div>
+              <div class="bg-brandAccent px-3 py-2 text-center">
+                <p class="text-white font-black text-[11px] uppercase tracking-wide">CA Associate</p>
+                <p class="text-teal-200 text-[9px] mt-0.5">Audit Desk</p>
+              </div>
+            </div>
+
+            <div class="partner-card border border-slate-200 overflow-hidden">
+              <div class="relative h-44 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&auto=format&fit=crop&q=80"
+                     alt="Partner" class="w-full h-full object-cover object-top"/>
+                <div class="partner-overlay absolute inset-0 bg-brandDark/70 flex items-center justify-center">
+                  <span class="text-[9px] text-brandGold font-bold uppercase tracking-widest border border-brandGold px-3 py-1.5">View Profile</span>
+                </div>
+              </div>
+              <div class="bg-brandAccent px-3 py-2 text-center">
+                <p class="text-white font-black text-[11px] uppercase tracking-wide">CA Associate</p>
+                <p class="text-teal-200 text-[9px] mt-0.5">Advisory Desk</p>
+              </div>
+            </div>
+
+            <div class="partner-card border border-slate-200 overflow-hidden">
+              <div class="relative h-44 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop&q=80"
+                     alt="Partner" class="w-full h-full object-cover object-top"/>
+                <div class="partner-overlay absolute inset-0 bg-brandDark/70 flex items-center justify-center">
+                  <span class="text-[9px] text-brandGold font-bold uppercase tracking-widest border border-brandGold px-3 py-1.5">View Profile</span>
+                </div>
+              </div>
+              <div class="bg-brandAccent px-3 py-2 text-center">
+                <p class="text-white font-black text-[11px] uppercase tracking-wide">CA Associate</p>
+                <p class="text-teal-200 text-[9px] mt-0.5">GST Desk</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-center mt-10">
+            <a href="#team" class="bg-brandDark hover:bg-slate-800 text-white text-[11px] font-bold uppercase tracking-wider px-8 py-3 transition inline-block">
+              Read More
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── CAREERS (unchanged from original) ── -->
+    <section id="careers" class="py-16 bg-slate-50 border-b border-slate-200 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto bg-white border border-slate-300 p-8 sm:p-12">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+              <p class="text-xs font-bold tracking-widest text-brandAccent uppercase">Talent Incubator</p>
+              <h2 class="text-2xl font-black text-brandDark mt-2 tracking-tight">Nurturing Elite Accounting Leadership</h2>
+              <p class="text-slate-600 text-sm mt-4 leading-relaxed">Following the exact structural development practices of premium domestic consulting firms, we offer well-defined transparent pathways for Articleship Training and experienced lateral recruitment.</p>
+            </div>
+            <div class="md:col-span-5 flex flex-col gap-3 w-full">
+              <div class="border border-slate-200 p-4 bg-slate-50 hover:border-brandGold cursor-pointer transition">
+                <h4 class="text-xs font-bold uppercase text-brandDark">Apply For Chartered Articleship</h4>
+                <p class="text-[10px] text-slate-500 mt-1">Submit parameters for interview evaluation loops.</p>
+              </div>
+              <div class="border border-slate-200 p-4 bg-slate-50 hover:border-brandGold cursor-pointer transition">
+                <h4 class="text-xs font-bold uppercase text-brandDark">Lateral Professional Recruitment</h4>
+                <p class="text-[10px] text-slate-500 mt-1">Experienced CA & Lawyer application registry desk.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── INTAKE (unchanged from original) ── -->
+    <section id="intake" class="py-16 sm:py-24 bg-white scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-5">
+            <p class="text-xs font-bold tracking-widest text-brandAccent uppercase">Client Intake Desk</p>
+            <h2 class="text-2xl sm:text-3xl font-black text-brandDark mt-2 tracking-tight">Initiate A Formal Engagement</h2>
+            <p class="text-slate-600 text-sm mt-4 leading-relaxed">Please specify your administrative requirements. Your transmission remains subject to strict corporate non-disclosure protocols and direct partner review assignment.</p>
+          </div>
+          <div class="lg:col-span-7 bg-white p-6 sm:p-10 border border-slate-300 shadow-sm">
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Inquiry securely logged in board database.');">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-[11px] font-bold tracking-wider text-slate-700 uppercase mb-2">Corporate Entity / Full Name</label>
+                  <input type="text" required class="w-full bg-slate-50 border border-slate-300 rounded-none p-3 text-sm focus:outline-none focus:border-brandDark text-slate-900"/>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold tracking-wider text-slate-700 uppercase mb-2">Secure Email Address</label>
+                  <input type="email" required class="w-full bg-slate-50 border border-slate-300 rounded-none p-3 text-sm focus:outline-none focus:border-brandDark text-slate-900"/>
+                </div>
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold tracking-wider text-slate-700 uppercase mb-2">Primary Practice Requirement</label>
+                <select class="w-full bg-slate-50 border border-slate-300 rounded-none p-3 text-sm focus:outline-none focus:border-brandDark text-slate-700">
+                  <option>Statutory Audit & Assurance Mandate</option>
+                  <option>Corporate Direct Tax Optimization</option>
+                  <option>Indirect Taxation Support (GST/Corporate)</option>
+                  <option>Corporate Restructuring & Strategic Advisory</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold tracking-wider text-slate-700 uppercase mb-2">Brief Summary of Financial Inquiry</label>
+                <textarea rows="4" required class="w-full bg-slate-50 border border-slate-300 rounded-none p-3 text-sm focus:outline-none focus:border-brandDark text-slate-900" placeholder="Please specify scope..."></textarea>
+              </div>
+              <button type="submit" class="w-full bg-brandDark hover:bg-slate-800 text-white font-bold py-4 text-xs tracking-widest uppercase transition">
+                Transmit Inquiry To Board
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── FOOTER (unchanged from original) ── -->
+    <footer class="bg-[#0F172A] text-white pt-16 pb-8 relative border-t-2 border-brandAccent">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 items-start border-b border-slate-800 pb-12">
+          <div class="md:col-span-4 flex justify-center md:justify-start">
+            <div class="bg-white p-3 shadow-md max-w-[280px] w-full flex items-center justify-center space-x-3">
+              <div class="border-2 border-[#0F172A] text-[#0F172A] font-serif text-xl font-black px-2.5 py-0.5 tracking-tighter leading-none flex flex-col items-center bg-slate-50"><span>CA</span></div>
+              <div class="border-l border-slate-300 pl-3 leading-tight">
+                <span class="block text-sm font-black tracking-tight text-[#0F172A] uppercase">Manish Pareek</span>
+                <span class="block text-[9px] font-bold tracking-widest text-brandAccent uppercase mt-0.5">& Associates</span>
+                <span class="block text-[8px] text-slate-500 font-medium tracking-normal">Chartered Accountants</span>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-5 text-sm space-y-4 font-light">
+            <h4 class="text-base font-semibold tracking-wide text-slate-200 mb-2 md:mb-4">Get In Touch</h4>
+            <div class="flex items-start space-x-3">
+              <svg class="w-4 h-4 mt-1 text-brandAccent shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <p class="text-[13px] text-slate-300 leading-relaxed">Commercial Complex Suite 102, Tonk Road / Gopalpura Area, Jaipur, Rajasthan, India, 302015</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-4 h-4 text-brandAccent shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <p class="text-[13px] text-slate-300 font-mono">+91 141-4066319, 2701001-002</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <svg class="w-4 h-4 text-brandAccent shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:contact@pareekassociates.com" class="text-[13px] text-slate-300 hover:underline hover:text-brandAccent transition">contact@pareekassociates.com</a>
+            </div>
+          </div>
+          <div class="md:col-span-3 text-sm space-y-3 font-light md:pl-8">
+            <h4 class="text-base font-semibold tracking-wide text-slate-200 mb-2 md:mb-4">Quick Links</h4>
+            <ul class="space-y-2.5 text-[13px] text-slate-300">
+              <li><a href="#firm"    class="hover:text-brandAccent transition flex items-center"><span class="text-brandAccent font-mono mr-2 text-[11px]">&gt;</span> About Us</a></li>
+              <li><a href="#intake"  class="hover:text-brandAccent transition flex items-center"><span class="text-brandAccent font-mono mr-2 text-[11px]">&gt;</span> Contact Us</a></li>
+              <li><a href="#careers" class="hover:text-brandAccent transition flex items-center"><span class="text-brandAccent font-mono mr-2 text-[11px]">&gt;</span> Careers</a></li>
+              <li><a href="#team"    class="hover:text-brandAccent transition flex items-center"><span class="text-brandAccent font-mono mr-2 text-[11px]">&gt;</span> Our Team</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex justify-center space-x-3 py-6">
+          <a href="#" class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-brandAccent hover:text-white hover:border-brandAccent transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:bg-brandAccent hover:text-white hover:border-brandAccent transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+        <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 tracking-wide gap-3 text-center sm:text-left">
+          <p>&copy; Copyright 2026 Manish Pareek & Associates LLP | All Rights Reserved.</p>
+          <p>Created By - <span class="hover:text-brandAccent cursor-pointer font-medium transition">Strategic Systems</span></p>
+        </div>
+      </div>
+      <a href="#" class="absolute bottom-6 right-6 w-9 h-9 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 flex items-center justify-center transition shadow-md group">
+        <svg class="w-4 h-4 transform group-hover:-translate-y-0.5 transition" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7 7 7M12 3v18"/></svg>
+      </a>
+    </footer>
+
+  </body>
+</html>
